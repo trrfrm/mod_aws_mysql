@@ -1,1 +1,14 @@
-# mod_aws_mysql
+## module _`mod_aws_mysql`_
+
+### Creates a basic virtual private cloud in AWS using a terraform module along with 2 Jenkins
+----------------------------------------------------------------------------------------------
+
+* This Terraform module deploys a MySQL db in AWS with 2 subnets passed in as input parameters
+
+* The module also creates 2 Route Tables(Public & Private), adding a web-subnet in public-rt and the db-subnet in private-rt and ofcourse a default security group to allow security rules on subnets in the deployed network
+
+### Example Usage
+-----------------
+
+* Kindly, Refer to the `./examples/` directory. 
+* You may execute `terraform apply` command in the examples's directory to try the _`mod_aws_mysql`_ module
