@@ -1,7 +1,7 @@
 resource "aws_vpc" "ntier" {
     cidr_block           = var.vpc_cidr
     tags     = {
-        Name = "ntiervpc-${local.env_prefix}"
+        Name = "ntier-vpc-${local.env_prefix}"
     }
 }
 
@@ -39,7 +39,6 @@ resource "aws_security_group" "db_SG" {
         cidr_blocks      = [local.any_where]
         ipv6_cidr_blocks = [local.any_where_ipv6]
     }
-    
     tags                 = {
         Name   = "DB-Security-${local.env_prefix}"
     }
