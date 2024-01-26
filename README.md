@@ -1,4 +1,4 @@
-## module _`mod_aws_mysql`_
+## module _mod_aws_mysql_
 
 ### Creates a basic virtual private cloud in AWS using a terraform module along with 2 Jenkins
 ----------------------------------------------------------------------------------------------
@@ -11,4 +11,4 @@
 -----------------
 
 * Kindly, Refer to the `./examples/` directory. 
-* You may execute `terraform apply` command in the examples's directory to try the _`mod_aws_mysql`_ module
+* You may execute `terraform apply` command in the examples's directory to try the _mod_aws_mysql_ module
