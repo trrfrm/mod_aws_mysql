@@ -10,5 +10,5 @@
 ### Example Usage
 ------------------
 
-* Kindly, Refer to the `./examples/` directory. 
-* You may execute `terraform apply` command in the examples's directory to try the _mod_aws_mysql_ module
+* Kindly, Refer the `./examples/` directory
+* You may execute `terraform apply` command in the examples's directory to check-out _mod_aws_mysql_ module

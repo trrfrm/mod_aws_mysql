@@ -9,7 +9,7 @@ locals {
     any_where            = "0.0.0.0/0"
     any_where_ipv6       = "::/0"
     public_ip_enabled    = "true"
-    env_prefix           = "withlove-fromtf"
+    env_prefix           = "fromtf"
     default_desc         = "Created from Terraform"
     
     db_subnet_groupname  = "stack-db-subnet-group"

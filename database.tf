@@ -20,7 +20,7 @@ resource "aws_db_instance" "database" {
   skip_final_snapshot  = true
 
   tags       = {
-    Name     = "dbserver"
+    Name     = "db-server"
   }
   depends_on = [ aws_db_subnet_group.db_subnet_group ]
 }

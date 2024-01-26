@@ -40,7 +40,7 @@ resource "aws_security_group" "db_SG" {
         ipv6_cidr_blocks = [local.any_where_ipv6]
     }
     tags                 = {
-        Name   = "DB-Security-${local.env_prefix}"
+        Name   = "DB-Security"
     }
     depends_on = [ aws_vpc.ntier ]
 }
