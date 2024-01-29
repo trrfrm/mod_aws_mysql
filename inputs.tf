@@ -13,7 +13,7 @@ variable "subnet_azs" {
     default = [ "ap-south-2a", "ap-south-2c" ]
 }
 
-variable "subnet_tags" {
+variable "db_subnet_tags" {
     type    = list(string)
-    default = [ "db-subnet", "pub-subnet" ]
+    default = [ "db1", "db2" ]
 }

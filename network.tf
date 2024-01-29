@@ -1,19 +1,20 @@
 resource "aws_vpc" "ntier" {
-    cidr_block           = var.vpc_cidr
+    cidr_block         = var.vpc_cidr
     tags     = {
         Name = "ntier-vpc-${local.env_prefix}"
     }
 }
 
 resource "aws_subnet" "subnets" {
-    count              = length(var.subnet_tags)
+    count              = length(var.db_subnet_tags)
     vpc_id             = aws_vpc.ntier.id
     cidr_block         = cidrsubnet(var.vpc_cidr, 8, count.index)
     availability_zone  = var.subnet_azs[count.index]
 
-    tags     = {
-        Name = var.subnet_tags[count.index]
+    tags       = {
+        Name   = var.db_subnet_tags[count.index]
     }
+    depends_on = [ aws_vpc.ntier ]
 }
 
 resource "aws_security_group" "db_SG" {
@@ -42,5 +43,5 @@ resource "aws_security_group" "db_SG" {
     tags                 = {
         Name   = "DB-Security"
     }
-    depends_on = [ aws_vpc.ntier ]
+    depends_on = [ aws_vpc.ntier, aws_subnet.subnets ]
 }
